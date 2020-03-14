@@ -3,11 +3,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.print("Enter first string: ");
-        String a = scan.nextLine();
-        System.out.print("Enter second string: ");
-        String b = scan.nextLine();
-        System.out.print(stringCompare(a, b));
+        Boolean again = false;
+
+        do {
+            System.out.print("Enter first string: ");
+            String a = scan.nextLine();
+            System.out.print("Enter second string: ");
+            String b = scan.nextLine();
+            System.out.println(stringCompare(a, b));
+            System.out.println("");
+
+            System.out.print("Do you want to compare again? (y/n) ");
+            String ans = scan.next();
+            again = ans.equalsIgnoreCase("y") ? true : false;
+        } while (again);
 
         scan.close();
     }
