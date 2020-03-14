@@ -14,7 +14,6 @@ public class Main {
             } else if (ans == "n") {
                 again = false;
             } else {
-                System.out.print(ans);
                 System.out.print("Wrong Input! Exiting program.");
             }
         } while (again);
