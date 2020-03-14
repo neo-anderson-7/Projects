@@ -1,2 +1,2 @@
-#StringCompare
-This tool can be used to compare strings
+# Tools
+This repo contains useful that I am developing for practice.
