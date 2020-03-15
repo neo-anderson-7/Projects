@@ -23,13 +23,18 @@ public class Main {
     }
 
     public static String stringCompare(String a, String b) {
+        String str1 = "";
+        String str2 = "";
         if (a.length() != b.length()) {
             int limit = a.length() < b.length() ? a.length() : b.length();
-            a = a.substring(0, limit);
-            b = b.substring(0, limit);
+            str1 = a.substring(0, limit);
+            str2 = b.substring(0, limit);
         }
 
-        int key = a.compareToIgnoreCase(b);
+        str1 = a;
+        str2 = b;
+
+        int key = str1.compareToIgnoreCase(str2);
         if (key == 0) {
             if (a.length() < b.length()) {
                 return(a + " comes before " + b);
