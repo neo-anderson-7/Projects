@@ -19,14 +19,25 @@ public class Main {
         } while (again);
 
         System.out.println("Exiting Program");
-
         scan.close();
     }
 
     public static String stringCompare(String a, String b) {
+        if (a.length() != b.length()) {
+            int limit = a.length() < b.length() ? a.length() : b.length();
+            a = a.substring(0, limit);
+            b = b.substring(0, limit);
+        }
+
         int key = a.compareToIgnoreCase(b);
         if (key == 0) {
-            return("Both strings are equal");
+            if (a.length() < b.length()) {
+                return(a + " comes before " + b);
+            } else if (a.length() > b.length()) {
+                return(b + " comes before " + a);
+            } else {
+                return("Both strings are equal");
+            }
         } else if (key < 0) {
             return(a + " comes before " + b);
         } else if (key > 0) {
