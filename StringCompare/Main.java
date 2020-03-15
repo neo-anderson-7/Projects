@@ -14,9 +14,11 @@ public class Main {
             System.out.println("");
 
             System.out.print("Do you want to compare again? (y/n) ");
-            String ans = scan.next();
+            String ans = scan.nextLine();
             again = ans.equalsIgnoreCase("y") ? true : false;
         } while (again);
+
+        System.out.println("Exiting Program");
 
         scan.close();
     }
