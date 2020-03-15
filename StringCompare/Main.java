@@ -79,15 +79,11 @@ public class Main {
         if (key == 0) {
             if (a.length() < b.length()) {
                 return true;
-            } else if (a.length() > b.length()) {
-                return false;
             } else {
-                return true;
+                return false;
             }
         } else if (key < 0) {
             return true;
-        } else if (key > 0) {
-            return false;
         } else {
             return false;
         }
